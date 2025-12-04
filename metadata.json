@@ -1,5 +1,5 @@
 {
-  "name": "My Website Builder",
-  "description": "An AI-powered tool to quickly generate and visualize ideas for your personal websites. See your creations in a beautiful block-style gallery.",
+  "name": "나만의 웹사이트",
+  "description": "포트폴리오, 프로젝트, 아이디어를 보여주는 개인 웹사이트 모음입니다.",
   "requestFramePermissions": []
 }
