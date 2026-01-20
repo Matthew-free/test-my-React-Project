@@ -1,52 +1,42 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full bg-zinc-950">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gemini Ink</title>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나만의 웹사이트</title>
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        os: {
-                            bg: '#1e1e2e',
-                            surface: '#313244',
-                            text: '#cdd6f4',
-                            accent: '#89b4fa'
-                        }
-                    },
-                    animation: {
-                        'pulse-fast': 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                    }
-                }
-            }
-        }
-    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
     <style>
-        body { touch-action: none; /* Prevent scrolling when drawing */ }
-        /* Custom scrollbar for Mail app */
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: transparent; }
-        ::-webkit-scrollbar-thumb { background: #4b5563; border-radius: 3px; }
+      body {
+        font-family: 'Noto Sans KR', sans-serif;
+      }
     </style>
 
-<script type="importmap">
-{
-  "imports": {
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.548.0",
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.27.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0"
-  }
-}
-</script>
-  <script type="module" crossorigin src="/test-my-React-Project/assets/index-Q35T-DP_.js"></script>
-</head>
-<body class="h-full overflow-hidden text-zinc-100 font-sans antialiased">
-    <div id="root" class="h-full w-full flex"></div>
-</body>
+    <!-- Import Map -->
+
+    <script type="importmap">
+    {
+      "imports": {
+        "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.1",
+        "react/": "https://aistudiocdn.com/react@^19.2.0/",
+        "react": "https://aistudiocdn.com/react@^19.2.0",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+      }
+    }
+    </script>
+    <script type="module" crossorigin src="/test-my-React-Project/assets/index-wvWg2R1d.js"></script>
+  </head>
+  <body class="bg-slate-900 text-white" style="min-height:100vh;">
+    <!-- 루트 페이지에서 바로 통합 뷰를 제공하므로 자동 이동을 제거합니다. -->
+    <div id="root"></div>
+    <!-- [중요] src 폴더 안의 index.tsx를 실행합니다 -->
+  </body>
 </html>
