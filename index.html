@@ -26,13 +26,24 @@
         }
     </script>
     <style>
-        body { touch-action: none; /* Prevent scrolling when drawing */ }
-        /* Custom scrollbar for Mail app */
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: transparent; }
-        ::-webkit-scrollbar-thumb { background: #4b5563; border-radius: 3px; }
+        body { touch-action: none; }
+        .mail-scroll::-webkit-scrollbar { width: 8px; }
+        .mail-scroll::-webkit-scrollbar-track { background: transparent; }
+        .mail-scroll::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.1); border-radius: 4px; }
+        .mail-scroll::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.2); }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float { animation: float 3s ease-in-out infinite; }
+        @keyframes glow {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+        .animate-glow { animation: glow 2s ease-in-out infinite; }
     </style>
 
+<link rel="stylesheet" href="/index.css">
 <script type="importmap">
 {
   "imports": {
@@ -44,7 +55,7 @@
   }
 }
 </script>
-  <script type="module" crossorigin src="/test-my-React-Project/assets/index-Q35T-DP_.js"></script>
+  <script type="module" crossorigin src="/test-my-React-Project/assets/index-BrSiX_na.js"></script>
 </head>
 <body class="h-full overflow-hidden text-zinc-100 font-sans antialiased">
     <div id="root" class="h-full w-full flex"></div>
