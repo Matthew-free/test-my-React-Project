@@ -1,0 +1,5 @@
+{
+  "name": "Last Light",
+  "description": "A 2D top-down survival horror game where you must navigate a pitch-black abandoned school using only a fading flashlight. Avoid the noise-sensitive creature and find the exit.",
+  "requestFramePermissions": []
+}

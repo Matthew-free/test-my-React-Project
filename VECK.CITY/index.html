@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VECK.CITY - ULTIMATE WEB FPS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@900&display=swap');
+    
+    body { 
+      margin: 0; 
+      overflow: hidden; 
+      background: #000; 
+      font-family: 'Nunito', sans-serif;
+      user-select: none;
+    }
+
+    .game-font { font-family: 'Fredoka One', cursive; }
+
+    /* Juicy 3D Button Style */
+    .btn-3d {
+      transition: all 0.1s;
+      position: relative;
+      top: 0;
+      cursor: pointer;
+    }
+    .btn-3d:active {
+      top: 4px;
+      box-shadow: none !important;
+    }
+
+    /* Text Outline Effect */
+    .text-outline {
+      text-shadow: 
+        -2px -2px 0 #000,  
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000,
+         0px  4px 0px rgba(0,0,0,0.5);
+    }
+
+    #crosshair {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 30px;
+      height: 30px;
+      border: 3px solid rgba(255, 255, 255, 0.9);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 100;
+      display: none;
+      mix-blend-mode: difference;
+    }
+    #crosshair::before { content: ''; position: absolute; top: 50%; left: -5px; width: 10px; height: 3px; background: white; transform: translateY(-50%); }
+    #crosshair::after { content: ''; position: absolute; left: 50%; top: -5px; width: 3px; height: 10px; background: white; transform: translateX(-50%); }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #444; border-radius: 10px; }
+  </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.2.3",
+    "react-dom": "https://esm.sh/react-dom@19.2.3",
+    "three": "https://esm.sh/three@0.170.0",
+    "three/examples/jsm/loaders/GLTFLoader": "https://esm.sh/three@0.170.0/examples/jsm/loaders/GLTFLoader.js",
+    "cannon-es": "https://esm.sh/cannon-es@0.20.0",
+    "socket.io-client": "https://esm.sh/socket.io-client@4.7.4",
+    "vite": "https://esm.sh/vite@^7.3.0",
+    "three/": "https://esm.sh/three@^0.182.0/",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <div id="crosshair"></div>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
